@@ -27,7 +27,7 @@
 	android.permission.READ_EXTERNAL_STORAGE
 	android.permission.WRITE_SETTINGS
 	android.permission.READ_PHONE_STATE
-## Sources: 415
+## Sources: 428
 	<android.view.View: int getWidth()>: 7
 	<android.view.ViewGroup: android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams)>: 1
 	<org.json.JSONObject: double getDouble(java.lang.String)>: 1
@@ -68,7 +68,9 @@
 	<java.util.HashMap: java.lang.Object get(java.lang.Object)>: 55
 	<android.app.AlertDialog: android.widget.Button getButton(int)>: 1
 	<java.lang.Throwable: java.lang.Throwable getCause()>: 17
+	<java.net.HttpURLConnection: java.io.InputStream getInputStream()>: 5
 	<org.json.JSONObject: java.lang.Object get(java.lang.String)>: 3
+	<android.database.Cursor: int getInt(int)>: 2
 	<android.graphics.Bitmap: android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap$Config)>: 2
 	<android.os.Parcel: byte[] createByteArray()>: 11
 	<java.lang.reflect.Method: java.lang.'annotation'.Annotation[][] getParameterAnnotations()>: 1
@@ -83,6 +85,7 @@
 	<android.net.NetworkInfo: int getType()>: 1
 	<java.lang.ref.SoftReference: java.lang.Object get()>: 1
 	<java.lang.String: void getChars(int,int,char[],int)>: 1
+	<android.database.Cursor: java.lang.String getString(int)>: 12
 	<android.os.Handler: android.os.Looper getLooper()>: 4
 	<android.app.Activity: android.content.Intent getIntent()>: 6
 	<android.net.NetworkInfo: android.net.NetworkInfo$DetailedState getDetailedState()>: 1
@@ -107,6 +110,7 @@
 	<android.content.res.Resources: android.content.res.Resources getSystem()>: 1
 	<java.lang.reflect.Array: java.lang.Object newInstance(java.lang.Class,int)>: 17
 	<java.lang.reflect.Method: java.lang.String getName()>: 27
+	<java.io.File: java.io.File[] listFiles()>: 4
 	<java.net.HttpURLConnection: java.io.InputStream getErrorStream()>: 3
 	<android.content.Intent: int getIntExtra(java.lang.String,int)>: 9
 	<android.os.Bundle: void setClassLoader(java.lang.ClassLoader)>: 4
@@ -183,6 +187,7 @@
 	<android.app.Fragment: android.os.Bundle getArguments()>: 1
 	<org.xml.sax.SAXException: java.lang.String getMessage()>: 2
 	<java.util.Calendar: java.util.Calendar getInstance(java.util.TimeZone)>: 3
+	<android.content.res.AssetManager: java.io.InputStream open(java.lang.String)>: 2
 	<android.content.res.TypedArray: int getColor(int,int)>: 16
 	<java.lang.Thread: java.lang.StackTraceElement[] getStackTrace()>: 2
 	<java.lang.Class: java.lang.reflect.Field getField(java.lang.String)>: 1
@@ -210,6 +215,7 @@
 	<java.security.MessageDigest: byte[] digest(byte[])>: 1
 	<java.util.concurrent.atomic.AtomicLong: long get()>: 1
 	<android.renderscript.RenderScript: android.renderscript.RenderScript create(android.content.Context)>: 1
+	<java.io.FileInputStream: void <init>: 5
 	<java.util.ArrayList: java.lang.Object get(int)>: 34
 	<android.net.Uri: java.lang.String decode(java.lang.String)>: 1
 	<java.lang.Class: java.lang.reflect.Type[] getGenericInterfaces()>: 8
@@ -236,17 +242,21 @@
 	<android.view.View: android.os.IBinder getWindowToken()>: 1
 	<java.lang.Class: java.lang.String getName()>: 97
 	<android.location.Location: long getTime()>: 1
+	<org.apache.http.HttpEntity: java.io.InputStream getContent()>: 4
 	<java.util.Locale: java.lang.String getCountry()>: 4
+	<android.database.Cursor: long getLong(int)>: 1
 	<android.content.res.TypedArray: int getResourceId(int,int)>: 2
 	<android.support.v4.view.MotionEventCompat: int getActionIndex(android.view.MotionEvent)>: 12
 	<android.content.res.Resources: java.lang.String[] getStringArray(int)>: 1
 	<android.view.View: int getTop()>: 2
 	<android.view.ViewGroup: android.view.View getChildAt(int)>: 13
 	<android.support.v4.view.ViewPager: android.support.v4.view.PagerAdapter getAdapter()>: 30
+	<java.io.File: boolean delete()>: 16
 	<java.text.NumberFormat: java.lang.Number parse(java.lang.String)>: 1
 	<java.lang.Character: int getType(int)>: 2
 	<org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>: 1
 	<android.app.Fragment: android.content.res.Resources getResources()>: 1
+	<java.io.File: void <init>: 37
 	<android.location.LocationManager: boolean isProviderEnabled(java.lang.String)>: 1
 	<android.media.AudioManager: boolean isMusicActive()>: 1
 	<android.util.SparseArray: java.lang.Object get(int)>: 2
@@ -343,6 +353,7 @@
 	<java.net.HttpURLConnection: boolean getInstanceFollowRedirects()>: 1
 	<java.lang.reflect.Method: java.lang.reflect.TypeVariable[] getTypeParameters()>: 1
 	<java.net.URLConnection: boolean getDoInput()>: 2
+	<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>: 33
 	<java.lang.Enum: java.lang.String toString()>: 4
 	<android.widget.EditText: android.text.Editable getText()>: 7
 	<java.lang.Class: java.lang.'annotation'.Annotation getAnnotation(java.lang.Class)>: 1
@@ -379,12 +390,14 @@
 	<java.lang.System: java.lang.String getenv(java.lang.String)>: 3
 	<java.util.concurrent.atomic.AtomicInteger: int getAndIncrement()>: 2
 	<android.view.View: boolean getGlobalVisibleRect(android.graphics.Rect,android.graphics.Point)>: 6
+	<android.content.Context: java.io.FileInputStream openFileInput(java.lang.String)>: 1
 	<android.content.res.Resources: java.lang.String getString(int)>: 8
 	<android.os.Bundle: android.os.Bundle getBundle(java.lang.String)>: 18
 	<java.net.URLConnection: java.lang.String getContentType()>: 2
 	<android.provider.Settings$Secure: java.lang.String getString(android.content.ContentResolver,java.lang.String)>: 3
 	<java.net.URI: int getPort()>: 3
 	<javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>: 1
+	<android.content.Context: java.lang.Object getSystemService(java.lang.String)>: 42
 	<android.graphics.drawable.Drawable: int getIntrinsicWidth()>: 1
 	<android.os.Environment: java.lang.String getExternalStorageState()>: 1
 	<android.content.res.Resources: int getIdentifier(java.lang.String,java.lang.String,java.lang.String)>: 2
@@ -443,7 +456,7 @@
 	<android.os.PowerManager: android.os.PowerManager$WakeLock newWakeLock(int,java.lang.String)>: 1
 	<android.net.NetworkInfo: java.lang.String getTypeName()>: 2
 	<java.lang.Class: java.lang.reflect.Constructor[] getDeclaredConstructors()>: 1
-## Sinks: 223
+## Sinks: 246
 	<android.content.Intent: android.content.Intent setPackage(java.lang.String)>: 11
 	<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.io.InputStream)>: 3
 	<org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>: 2
@@ -479,17 +492,20 @@
 	<java.math.BigInteger: java.math.BigInteger setBit(int)>: 1
 	<android.accounts.AccountManager: void invalidateAuthToken(java.lang.String,java.lang.String)>: 1
 	<android.net.TrafficStats: void setThreadStatsTag(int)>: 1
+	<java.net.HttpURLConnection: void connect()>: 4
 	<android.widget.TextView: void setText(java.lang.CharSequence)>: 13
 	<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>: 8
 	<java.util.Calendar: void setTime(java.util.Date)>: 1
 	<android.support.v4.view.ViewPager: void setCurrentItem(int)>: 15
 	<android.webkit.WebSettings: void setSupportZoom(boolean)>: 1
 	<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String[])>: 2
+	<java.net.HttpURLConnection: java.io.InputStream getInputStream()>: 5
 	<android.content.Intent: android.content.Intent setClassName(java.lang.String,java.lang.String)>: 2
 	<android.widget.TextView: void setTextAppearance(android.content.Context,int)>: 1
 	<android.webkit.WebSettings: void setMediaPlaybackRequiresUserGesture(boolean)>: 1
 	<android.media.MediaPlayer: void setOnInfoListener(android.media.MediaPlayer$OnInfoListener)>: 1
 	<java.lang.Thread: void setContextClassLoader(java.lang.ClassLoader)>: 1
+	<android.content.SharedPreferences$Editor: boolean commit()>: 8
 	<android.content.ContentValues: void put(java.lang.String,java.lang.Long)>: 1
 	<org.apache.http.conn.scheme.SchemeRegistry: org.apache.http.conn.scheme.Scheme register(org.apache.http.conn.scheme.Scheme)>: 2
 	<java.net.HttpURLConnection: void setRequestMethod(java.lang.String)>: 14
@@ -499,17 +515,22 @@
 	<android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>: 6
 	<java.lang.StringBuffer: void setLength(int)>: 1
 	<java.io.File: boolean setLastModified(long)>: 1
+	<java.io.BufferedWriter: void write(java.lang.String)>: 3
 	<android.os.Parcel: void setDataPosition(int)>: 35
 	<java.net.URL: void setURLStreamHandlerFactory(java.net.URLStreamHandlerFactory)>: 1
 	<java.io.FileOutputStream: void write(byte[],int,int)>: 1
+	<android.database.sqlite.SQLiteDatabase: long insert(java.lang.String,java.lang.String,android.content.ContentValues)>: 1
+	<java.io.OutputStreamWriter: void <init>: 3
 	<android.util.Log: int i(java.lang.String,java.lang.String)>: 7
 	<android.view.View: void setBackgroundDrawable(android.graphics.drawable.Drawable)>: 1
 	<java.util.HashSet: boolean add(java.lang.Object)>: 7
 	<java.io.PrintWriter: void println(java.lang.Object)>: 1
 	<android.media.MediaPlayer: void setOnPreparedListener(android.media.MediaPlayer$OnPreparedListener)>: 1
 	<android.app.Fragment: void startActivityForResult(android.content.Intent,int)>: 1
+	<java.io.OutputStreamWriter: java.io.Writer append(java.lang.CharSequence)>: 1
 	<android.os.Parcel: void writeStringArray(java.lang.String[])>: 7
 	<android.app.Activity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)>: 1
+	<java.net.URL: void <init>: 16
 	<org.apache.http.impl.cookie.DateUtils: java.util.Date parseDate(java.lang.String)>: 1
 	<android.webkit.WebSettings: void setAllowContentAccess(boolean)>: 1
 	<java.io.OutputStream: void write(byte[])>: 7
@@ -517,11 +538,13 @@
 	<android.view.Window: void setSoftInputMode(int)>: 1
 	<android.os.Bundle: void putBoolean(java.lang.String,boolean)>: 19
 	<android.util.Log: int wtf(java.lang.String,java.lang.String,java.lang.Throwable)>: 21
+	<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>: 2
 	<android.os.Bundle: void writeToParcel(android.os.Parcel,int)>: 47
 	<android.app.Activity: void setContentView(int)>: 1
 	<java.io.Writer: void write(java.lang.String)>: 2
 	<android.webkit.WebSettings: void setUserAgentString(java.lang.String)>: 1
 	<java.net.URLConnection: void setDefaultUseCaches(boolean)>: 2
+	<java.lang.Class: java.lang.Class forName(java.lang.String)>: 12
 	<java.lang.reflect.Field: void set(java.lang.Object,java.lang.Object)>: 4
 	<java.lang.Thread: void setName(java.lang.String)>: 1
 	<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Bundle)>: 3
@@ -532,8 +555,12 @@
 	<android.content.Intent: android.content.Intent putExtra(java.lang.String,boolean)>: 5
 	<java.lang.Thread: void setUncaughtExceptionHandler(java.lang.Thread$UncaughtExceptionHandler)>: 2
 	<java.net.URLConnection: void setAllowUserInteraction(boolean)>: 2
+	<java.lang.ProcessBuilder: java.lang.Process start()>: 1
 	<android.view.View: void setOnClickListener(android.view.View$OnClickListener)>: 1
+	<java.io.PrintWriter: void println(java.lang.String)>: 9
+	<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity exchange(java.lang.String,org.springframework.http.HttpMethod,org.springframework.http.HttpEntity,java.lang.Class,java.lang.Object[])>: 1
 	<android.view.View: void draw(android.graphics.Canvas)>: 1
+	<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>: 33
 	<android.widget.ImageView: void setImageResource(int)>: 1
 	<org.apache.http.conn.params.ConnManagerParams: void setMaxConnectionsPerRoute(org.apache.http.params.HttpParams,org.apache.http.conn.params.ConnPerRoute)>: 1
 	<java.net.URLConnection: void setDoInput(boolean)>: 2
@@ -544,6 +571,8 @@
 	<android.media.MediaPlayer: void setDataSource(android.content.Context,android.net.Uri)>: 1
 	<android.os.Bundle: void setClassLoader(java.lang.ClassLoader)>: 4
 	<java.lang.Throwable: void setStackTrace(java.lang.StackTraceElement[])>: 1
+	<java.io.FileOutputStream: void <init>: 7
+	<java.io.FileOutputStream: void write(byte[])>: 2
 	<android.widget.ImageView: void setImageDrawable(android.graphics.drawable.Drawable)>: 1
 	<android.widget.LinearLayout: void setOrientation(int)>: 1
 	<java.lang.Integer: int parseInt(java.lang.String)>: 19
@@ -557,12 +586,14 @@
 	<android.app.ActivityManager: java.util.List getRunningTasks(int)>: 2
 	<java.lang.String: java.lang.String substring(int,int)>: 69
 	<android.media.MediaPlayer: void setScreenOnWhilePlaying(boolean)>: 1
+	<java.io.PrintWriter: java.io.PrintWriter append(java.lang.CharSequence)>: 40
 	<java.net.Socket: void setSocketImplFactory(java.net.SocketImplFactory)>: 1
 	<android.webkit.WebSettings: void setSupportMultipleWindows(boolean)>: 1
 	<android.webkit.WebSettings: void setJavaScriptCanOpenWindowsAutomatically(boolean)>: 1
 	<java.net.URLConnection: void setIfModifiedSince(long)>: 2
 	<android.graphics.drawable.LayerDrawable: void setLayerInset(int,int,int,int,int)>: 4
 	<java.io.File: boolean setExecutable(boolean,boolean)>: 1
+	<java.io.DataOutputStream: void write(byte[])>: 3
 	<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable)>: 3
 	<android.webkit.WebSettings: void setDomStorageEnabled(boolean)>: 1
 	<org.apache.http.conn.params.ConnManagerParams: void setMaxTotalConnections(org.apache.http.params.HttpParams,int)>: 1
@@ -621,6 +652,7 @@
 	<android.util.Log: int w(java.lang.String,java.lang.String)>: 46
 	<javax.xml.parsers.DocumentBuilderFactory: void setNamespaceAware(boolean)>: 1
 	<android.content.MutableContextWrapper: void setBaseContext(android.content.Context)>: 2
+	<android.content.Context: android.content.ComponentName startService(android.content.Intent)>: 2
 	<android.app.Activity: void startActivity(android.content.Intent)>: 1
 	<java.lang.String: java.lang.String replace(char,char)>: 4
 	<android.content.Intent: android.content.Intent setDataAndType(android.net.Uri,java.lang.String)>: 2
@@ -631,10 +663,12 @@
 	<android.os.WorkSource: boolean add(android.os.WorkSource)>: 1
 	<org.apache.http.params.HttpProtocolParams: void setUseExpectContinue(org.apache.http.params.HttpParams,boolean)>: 2
 	<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>: 216
+	<android.content.Context: void startActivity(android.content.Intent)>: 3
 	<java.io.PrintWriter: void println(int)>: 2
 	<android.os.AsyncTask: android.os.AsyncTask execute(java.lang.Object[])>: 1
 	<android.media.MediaPlayer: void setOnBufferingUpdateListener(android.media.MediaPlayer$OnBufferingUpdateListener)>: 1
 	<android.os.Parcel: void writeFloatArray(float[])>: 1
+	<java.net.URLConnection: java.io.InputStream getInputStream()>: 6
 	<android.media.MediaPlayer: void setSurface(android.view.Surface)>: 1
 	<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setNegativeButton(int,android.content.DialogInterface$OnClickListener)>: 5
 	<java.util.regex.Matcher: java.util.regex.Matcher appendReplacement(java.lang.StringBuffer,java.lang.String)>: 10
@@ -654,6 +688,7 @@
 	<android.view.View: void setVisibility(int)>: 8
 	<android.content.Intent: android.content.Intent createChooser(android.content.Intent,java.lang.CharSequence)>: 1
 	<java.util.zip.Deflater: void setLevel(int)>: 1
+	<java.io.File: boolean delete()>: 16
 	<java.text.NumberFormat: java.lang.Number parse(java.lang.String)>: 1
 	<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setNeutralButton(int,android.content.DialogInterface$OnClickListener)>: 1
 	<org.apache.http.entity.BasicHttpEntity: void setContentLength(long)>: 1
@@ -665,5 +700,6 @@
 	<android.widget.PopupWindow: void setClippingEnabled(boolean)>: 3
 	<android.widget.TextView: void setPadding(int,int,int,int)>: 1
 	<android.os.Handler: boolean sendMessageDelayed(android.os.Message,long)>: 1
+	<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>: 6
 	<java.net.URLConnection: void setUseCaches(boolean)>: 3
 	<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>: 173
